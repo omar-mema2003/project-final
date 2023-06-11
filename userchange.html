@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+    
+body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+         
+}
+nav {
+	background-color: white;
+	height: 50px;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: right;
+	align-items: right;
+	height: 100%;
+}
+
+li {
+	margin: 0 10px;
+margin-top: 1%;
+font-size: 2.5vh;
+
+} 
+a{
+  color: rgb(36, 102, 168);
+  font-size: 20px;
+}
+a:hover{
+  color:rgb(141, 226, 21);
+}
+label{
+color: black;
+margin-left: 70vh;
+}
+#myDiv {
+  width: 80%;
+  height: 100%;
+
+  margin: auto;
+}
+
+table {
+ 
+  width: 100%;
+  height: 100%;
+  
+}
+
+td {
+  text-align: center;
+  border:10px solid white;
+}
+</style>
+    <title>صفحة تعديل المستخدمين</title>
+</head>
+<body>
+  <!--section header-->
+  <section>
+<header>
+  <nav>
+    <ul>
+      <li><b><a href="index.html">الصفحة الرئيسية</a></b></li>
+      <li><b><a href="photo.html">الصور</a></b></li>
+      <li><b><a href="advantages.html">المميزات</a></b></li>
+      <li><b><a href="connectus.html">تواصل معنا</a></b></li>
+      <li class="nav-item" style="margin-top: 2vh;">    
+        <select  style="background-color: rgb(49, 151, 124); border-radius: 1vh; height:4vh ;" onchange="if (this.value) window.location.href=this.value;">
+        <option> تسجيل الدخول </option>
+        <option value="loginadmin.html">admin</option>
+        <option value="loginusers.html">loginusers</option>
+        <option value="loginofficial.html">offical</option>
+        </select>
+    </li>
+    <li><b><a href="reservation.html">مواعيد الملاعب</a></b></li>
+    <li style="float: left; margin-right: auto;"><img src="images/logo.png" alt="" style="width: 12vh; height: 12vh; margin-top: -4vh;"></li> 
+    </ul>
+    <hr style="border: 1px solid black;">
+  </nav>
+</header>
+</section>
+<br>
+<br>
+<!--section تعديل جدول المستخدمين-->
+<section>
+<h1 style="text-align: center;"> تعديل المستخدم </h1>
+    <div class="container " style="text-align:center; width: 80vh; height: 80vh; margin-top: 10vh;">
+       
+        <div class="row justify-content-center" >
+          <div class="col-6">
+            
+            <div class="form-group">
+                <label for="text-input"> اسم المستخدم : </label>
+                <input type="text" id="text-input" class="form-control" placeholder="اسم المستخدم">
+              </div><br>   
+              <div class="form-group">
+                <label for="text-input">  رقم الجوال : </label>
+                <input type="text" id="text-input" class="form-control" placeholder="رقم الجوال">
+              </div><br>
+              <div class="form-group">
+                <label for="text-input"> اسم الملعب : </label>
+                <input type="text" id="text-input" class="form-control" placeholder="اسم الملعب">
+              </div><br>
+            <div class="form-group">
+                <label for="text-input" style="width: 11vh;">  تاريخ التعديل: </label>
+                <input type="date"  class="form-control" placeholder="التاريخ">
+              </div><br>
+       
+          
+            
+              <div class="form-group">
+                <b><a href="users.html"><input type="submit"   value="تعديل" class="btn btn-success" style="width: 25vh; height: 5vh;"></a> </b>
+               </div>
+          </div>
+        </div>
+      </div>
+</section>    
+
+</body>
+</html>

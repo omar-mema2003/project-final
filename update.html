@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> صفحة عرض جميع الملاعب  </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<style>
+    body {
+      display:block;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+
+    }
+  /*  nav {
+	background-color: white;
+	height: 50px;
+}
+ul {
+	margin: 0;
+	
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: right;
+	align-items: right;
+	height: 100%;
+
+
+}
+
+li {
+	margin: 0 10px;
+	margin-top: 3vh;
+ 
+}
+a {
+	display: block;
+  color: rgb(60, 114, 190);
+	text-decoration:  none ;
+	padding: 0 10px;
+	height: 30%;
+	line-height: 0px;
+}
+a:hover {
+	color:rgb(73, 227, 204);
+}*/
+.h1{
+  width: 86%;
+}
+.custom-table {
+      width: 100%;
+      margin-bottom: 20px;
+      font-size: 24px;
+      text-align: center;
+      background-color: green;
+      color: white;
+    }
+
+    .radius-table {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: right;
+      background-color: gray;
+      color: white;
+      border-spacing: 0;
+    }
+    .cost-table {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: right;
+      background-color: rgb(205, 204, 204);
+      color: white;
+      border-spacing: 0;
+    }
+
+    .foot-table {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: right;
+      background-color: rgb(152, 152, 152);
+      color: white;
+      border-spacing: 0;
+    }
+
+    .root-table {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: right;
+      background-color: rgb(89, 89, 89);
+      color: white;
+      border-spacing: 0;
+    }
+
+    
+</style>
+</head>
+<body>
+  <!-- section header-->
+  <section>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-primary"  >
+  
+    <div class="collapse navbar-collapse" style="margin-top: -3vh;" id="navbarNav">
+      <ul class="navbar-nav ml-auto" >
+        <li class="nav-item" style="padding: 4px;">
+         <b> <a class="nav-link" href="index.html">الصفحة الرئيسية</a></b>
+        </li>
+        <li class="nav-item" style="padding: 4px;">
+          <b>   <a class="nav-link" href="photo.html">الصور</a></b>
+        </li>
+        <li class="nav-item" style="padding: 4px;">
+          <b>   <a class="nav-link" href="advantages.html">المميزات</a></b>
+        </li>
+      
+        <li class="nav-item" style="padding: 4px;">
+          <b>   <a class="nav-link" href="connectus.html">تواصل معنا</a></b>
+        </li>
+        <li class="nav-item" style="margin-top: 1vh; padding: 4px;"> 
+          <select style="background-color: rgb(49, 151, 124); border-radius: 1vh; height:4vh ;" onchange="if (this.value) window.location.href=this.value;">
+            <option> تسجيل الدخول </option>
+            <option value="loginadmin.html">admin</option>
+            <option value="loginusers.html">loginusers</option>
+            <option value="loginofficial.html">offical</option>
+
+          </select>
+        </li>
+        <li class="nav-item" style="padding: 4px;">
+          <b><a class="nav-link" href="reservation.html">مواعيد الملاعب</a></b>
+        </li>
+      </ul> 
+       <a class="navbar-brand" href="#">
+      <img src="images/logo.png" alt="" style="width: 11vh; height: 11vh;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    </div>
+  </nav>
+</header>
+</section>
+  <br><!-- اضافة زر ارسال والملاعب الغير مقبولة -->
+  <div class="form-group" id="name" style="direction: ltr; width: 86%;">
+    <div  style="display: flex; ">
+      <b>
+        <input type="submit" onclick="goToPage2()" style="width: 140%; height: 120%; text-align: center; float: left; " class="btn btn-primary" value="اضافة ملعب جديد">
+      </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <b>
+        <input type="submit" onclick="goToPage4()" style="width: 120%; height: 120%; text-align: center; float: left;" class="btn btn-primary" value="الملاعب الغير مقبولة">
+      </b>
+    </div>
+  </div>
+<!--containar عرض الملاعب-->
+  <div class="container" style="border-radius: 2vh;">
+    <table class="table custom-table" style="border-radius: 1vh;">
+      <thead>
+        <tr>
+          <th style="text-align: right;"><b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; صورة الملعب </b></th>
+          <th style="text-align: right;"><b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; اسم الملعب  </b></th>
+          <th style="text-align: right;"><b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; تاريخ الاضافة</b></th> 
+          <th style="text-align: right;"><b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; التعديل</b></th> 
+          <th style="text-align: right;"><b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; الحذف</b></th>
+
+        </tr>
+      </thead>
+    </table>
+
+    <div class="row" style="margin-top: -3vh;">
+      <div class="col-md-12">
+        <table class="table radius-table">
+          <tbody>
+            <tr>
+            <b><i>  <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/11.jpg" style="border: 3px solid white; border-radius: 2vh;width: 160px; height: 100px;"  alt=""></td></i></b>
+            <b><i> <td style="text-align: right; margin-right: -3vh;"><b><br> النجوم</b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></i></b>
+              <b><i>  <td class="td1" style="font-size: 1vh; text-align: right;"><b><br><br>1/2/2023</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></i></b>
+             <td>
+              <div class="form-group" style=" text-align: right;  margin-top: 2vh; margin-left: 3vh; width: 10vh;">
+              <input type="submit"  onclick="goToPage3()" value="تعديل" class="btn btn-success btn-lg btn-block">
+              </div>
+             </td>
+             <td>
+              <div class="form-group" style="display: inline-block; text-align: left; margin-top: 2vh;  width: 10vh;">
+              <input type="submit" value="حذف" class="btn btn-danger btn-lg btn-block">
+              </div>
+             </td>
+           
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: -3vh;">
+      <div class="col-md-12">
+        <table class="table cost-table">
+          <tbody>
+            <tr>
+              <b><i>  <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/14.jpg" style="border: 3px solid white; border-radius: 2vh;width: 160px; height: 100px;"  alt=""></td></i></b>
+              <b><i>  <td style="text-align: right;"><b><br> العنان</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></i></b>
+              <b><i>  <td class="td1" style="font-size: 1vh; text-align: right;"><b><br><br>1/2/2023</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></i></b>
+              <td>
+                <div class="form-group" style=" text-align: right;  margin-top: 2vh; margin-left: 3vh; width: 10vh;">
+                <input type="submit" onclick="goToPage3()" value="تعديل" class="btn btn-success btn-lg btn-block">
+                </div>
+               </td>
+               <td>
+                <div class="form-group" style="display: inline-block; text-align: left; margin-top: 2vh;  width: 10vh;">
+                <input type="submit" value="حذف" class="btn btn-danger btn-lg btn-block">
+                </div>
+                </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row" style="margin-top: -3vh;">
+      <div class="col-md-12">
+        <table class="table foot-table">
+          <tbody>
+            <tr>
+              <b><i>  <td>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/6.png" style="border: 3px solid white; border-radius: 2vh;width: 160px; height: 100px;"  alt=""></td></i></b>
+              <b><i>  <td style="text-align: right; margin-right: -3vh;"><b><br> الاتحاد</b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></i></b>
+              <b><i>  <td class="td1" style="font-size: 1vh; text-align: right;"><b><br><br>1/2/2023</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></i></b>
+              <td>
+                <div class="form-group" style=" text-align: right;  margin-top: 2vh; margin-left: 3vh; width: 10vh;">
+                <input type="submit" onclick="goToPage3()" value="تعديل" class="btn btn-success btn-lg btn-block">
+                </div>
+               </td>
+               <td>
+                <div class="form-group" style="display: inline-block; text-align: left; margin-top: 2vh;  width: 10vh;">
+                <input type="submit" value="حذف" class="btn btn-danger btn-lg btn-block">
+                </div>
+                </td>
+            
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row" style="margin-top: -3vh;" >
+      <div class="col-md-12" >
+        <table class="table root-table" style="border-radius: 1vh;">
+          <tbody>
+            <tr>
+              <b><i>  <td>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/13.jpg" style="border: 3px solid white; border-radius: 2vh;width: 160px; height: 100px;"  alt=""></td></i></b>
+              <b><i>  <td style="text-align: right; margin-right: -3vh;"><b><br> البلدي</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></i></b>
+              <b><i>  <td class="td1" style="font-size: 1vh; text-align: right;"><b><br><br>1/2/2023</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></i></b>
+              <td>
+                <div class="form-group" style=" text-align: right;  margin-top: 2vh; margin-left: 3vh; width: 10vh;">
+                <input type="submit" onclick="goToPage3()" value="تعديل" class="btn btn-success btn-lg btn-block">
+                </div>
+               </td>
+               <td>
+                <div class="form-group" style="display: inline-block; text-align: left; margin-top: 2vh;  width: 10vh;">
+                <input type="submit" value="حذف" class="btn btn-danger btn-lg btn-block">
+                </div>
+                </td>
+           </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</div>
+
+
+
+</form>
+<script>
+  function goToPage2() {
+    window.location.href = "updates.html";
+  }
+  function goToPage() {
+    window.location.href = "reservation.html";
+  }
+  function goToPage3() {
+    window.location.href = "updateadmin.html";
+  }
+  function goToPage4() {
+    window.location.href = "nocompelet.html";
+  }
+  </script>
+<br><br>
+
+
+</body>
+</html>

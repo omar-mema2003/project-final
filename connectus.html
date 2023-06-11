@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascript/script.js" defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <style>
+    body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+            background-image: url('images/1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+}
+/*خاص للقائمة الرئيسية*/
+nav {
+	background-color: white;
+	height: 50px;
+}
+ul {
+	margin: 0;
+	
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: right;
+	align-items: right;
+	height: 100%;
+	
+}
+
+li {
+	margin: 0 10px;
+	margin-top: 3vh;
+	
+}
+a {
+	display: block;
+	color: rgb(36, 102, 168);
+	text-decoration:  none ;
+	padding: 0 10px;
+	height: 30%;
+	font-size:20px;
+	line-height: 0px;
+}
+a:hover {
+	color:rgb(73, 227, 204);
+}
+.container2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 6vh;
+	height: 70vh;
+}
+.column {
+	margin-bottom: 20px;
+	color: white;
+}  
+.column1{
+	text-align: center;
+
+}
+.column2{
+	color: red;
+	text-align: center;
+}  
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 30%;
+	
+}
+label, input, textarea {
+	margin-bottom: 10px;
+	
+}
+  </style>
+    <title>الاتصال بنا</title>
+</head>
+<body>
+  <!--section header-->
+  <section>
+  <header>
+    <nav>
+      <ul>
+        <li><b><a href="index.html">الصفحة الرئيسية</a></b></li>
+        <li><b><a href="photo.html">الصور</a></b></li>
+        <li><b><a href="advantages.html">المميزات</a></b></li>
+        <li><b><a href="connectus.html">تواصل معنا</a></b></li>
+        <li class="nav-item" style="margin-top: 1vh;">    
+          <select  style="background-color: rgb(49, 151, 124); border-radius: 1vh; height:4vh ;" onchange="if (this.value) window.location.href=this.value;">
+          <option> تسجيل الدخول </option>
+          <option value="loginadmin.html">admin</option>
+          <option value="loginusers.html">loginusers</option>
+          <option value="loginofficial.html">offical</option>
+          </select>
+      </li>
+      <li><b><a href="reservation.html">مواعيد الملاعب</a></b></li>
+      <li style="float: left; margin-right: auto;"><img src="images/logo.png" alt="" style="width: 11vh; height: 11vh; margin-top: -5vh;"></li> 
+      </ul>
+    </nav>
+    
+  </header>
+</section>
+<!-- section صفحة تواصل معنا-->
+  <section id="mySection1">
+<div class="container2">
+    <div class="column">
+     <b><i><h1 class="column1"> تواصل معنا </h1></i></b>
+     <h2 class="column2">972-52-622-8569+</h2>
+     <b><i><h1> تسعدنا اراءكم ومقترحاتكم </h1></i></b>
+    </div>
+    <form class="form-group">
+     
+        <input type="text" class="form-control" id="name" name="name" placeholder="الاسم:" required>
+        <br>
+        <input type="email" class="form-control" id="email" name="email" placeholder="البريد الالكتروني:" required>
+        <br>
+        <textarea class="form-control" id="message" name="message" style="height: 100px;" placeholder="اكتب رسالتك هنا:" required></textarea>
+        <br>
+        <button type="submit" class="btn btn-primary" style="width: 100%; height: 20%; color: white; background-color: green;"><i> <a href="#" style="color: white; text-decoration: none;"> إرسال </a></i></button>
+      </form>
+      </div>
+    </section>
+</body>
+</html>
